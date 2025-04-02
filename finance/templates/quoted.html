@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <p class="mb-3 large text-center">A share of {{ result["symbol"] }} costs {{ result["price"] | usd }}</p>
+{% endblock %}

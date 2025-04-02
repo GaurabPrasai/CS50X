@@ -1,0 +1,27 @@
+Prompt user for Height of Pyramid
+The height should be less than 8 and more than 1
+If
+    Height is less than 1 or more than 8
+        re-prompt the user again
+else
+    Ask for height
+Quit
+
+loop for rows
+    loop it until it reaches the value of n
+
+loop for columns
+
+if
+    column is less than row
+    print space
+
+else
+    print #
+
+print a new line
+
+End
+
+
+

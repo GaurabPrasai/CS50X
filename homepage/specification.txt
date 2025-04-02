@@ -1,0 +1,25 @@
+Ten HTML tags:
+<link>
+<script>
+<meta>
+<ul>
+<li>
+<a>
+<section>
+<div>
+<p>
+<i>
+
+Five CSS Properties:
+margin
+padding
+width
+height
+font-size
+
+How I choose to use JavaScript and Bootstrap:
+    = I used Javascript to add intractivity into my page like the interval text or the smooth scroll features.
+    = I used Bootstrap to make my designe more better and efficient by using pre made components like navbar and form.
+
+
+
