@@ -9,7 +9,6 @@ from helpers import apology, login_required, lookup, usd
 import datetime 
 # Configure application
 app = Flask(__name__)
-(((((())))))
 # Custom filter
 app.jinja_env.filters["usd"] = usd
 
