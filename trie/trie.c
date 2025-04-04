@@ -63,7 +63,6 @@ int main(int argc, char *argv[])
     while (fscanf(infile, "%s", name) == 1)
     {
         node *cursor = root;
-
         for (int i = 0, n = strlen(name); i < n; i++)
         {
             int index = tolower(name[i]) - 'a';
