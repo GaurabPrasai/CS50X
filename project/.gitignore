@@ -1,1 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
 
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Virtual Environment
+venv/
+django_env/
+env/
+ENV/
+
+# React
+node_modules/
+/react_frontend/build
+/react_frontend/.env
+/react_frontend/.env.local
+/react_frontend/.env.development.local
+/react_frontend/.env.test.local
+/react_frontend/.env.production.local
+/react_frontend/npm-debug.log*
+/react_frontend/yarn-debug.log*
+/react_frontend/yarn-error.log*
+
+# Environment variables
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS specific
+.DS_Store
+Thumbs.db

@@ -1,67 +1,86 @@
-# Recom: A Movie Recommendation System
+# Fikson: A Movie Recommendation System
 
-Recom is a machine learning-powered movie recommendation system designed to provide users with personalized movie suggestions based on their preferences. By utilizing advanced content-based filtering techniques and state-of-the-art tools, Recom ensures precise and relevant recommendations through a seamless and interactive interface.
+Fikson is a machine learning-powered movie recommendation system designed to provide users with personalized movie suggestions based on their preferences. By utilizing advanced content-based filtering techniques and state-of-the-art tools, Fikson ensures precise and relevant recommendations through a seamless and interactive interface.
 
 ## System Architecture
 
 ### 1. Machine Learning Model
-Recom employs a **content-based filtering algorithm** that analyzes features such as genres, directors, actors, and plot summaries. Using **TF-IDF vectorization**, these features are transformed into numerical vectors, enabling precise similarity calculations via **cosine similarity**. This ensures the model identifies movies that closely match user preferences.
 
-Key components:
-- **Feature Extraction**: Converts raw movie metadata into structured numerical data.
-- **Similarity Analysis**: Measures the closeness of movies based on feature vectors.
-
-```python
-from sklearn.metrics.pairwise import cosine_similarity
-similarity = cosine_similarity(movie_vectors)
-```
+Fikson employs a **content-based filtering algorithm** that analyzes features such as genres, directors, actors, and plot summaries. Using **TF-IDF vectorization**, these features are transformed into numerical vectors, enabling precise similarity calculations via **cosine similarity**. This ensures the model identifies movies that closely match user preferences.
 
 ### 2. Web Application
-The web interface, built with **Streamlit**, allows users to input their favorite movies and receive instant recommendations. Streamlit’s intuitive framework enables rapid prototyping and deployment of interactive features.
 
-Example usage:
-```bash
-streamlit run app.py
-```
+The application is built using a modern tech stack:
+
+- **Backend**: Django REST Framework API
+- **Frontend**: React with Bootstrap
+- **Data Processing**: Pandas and NumPy
 
 ### 3. Model Serialization
-The trained machine learning model is serialized using **Pickle**, ensuring fast and efficient deployment. This eliminates the need for retraining during runtime.
 
-```python
-import pickle
-# Save model
-pickle.dump(model, open('model.pkl', 'wb'))
-# Load model
-model = pickle.load(open('model.pkl', 'rb'))
-```
+The trained machine learning model is serialized using **Pickle**, ensuring fast and efficient deployment.
 
 ## Features
 
 1. **Real-Time Recommendations**: Delivers instant movie suggestions based on user input.
 2. **Scalable Design**: Modular architecture facilitates easy updates and future enhancements.
-3. **Optimized Performance**: Lightweight application optimized for quick response times.
+3. **Responsive UI**: Modern interface that works on both desktop and mobile devices.
+4. **Movie Posters**: Displays movie posters fetched from TMDB API.
 
 ## Installation Guide
 
 ### Prerequisites
-- Python 3.8+
-- Libraries: `streamlit`, `pandas`, `scikit-learn`
 
-### Steps
-1. Clone the repository:
+- Python 3.8+
+- Node.js 14+
+- TMDB API key
+
+### Backend Setup
+
+1. Navigate to the Django backend directory:
    ```bash
-   git clone https://github.com/your-repo/recom.git
-   cd recom
+   cd django_backend
    ```
-2. Install dependencies:
+2. Create a virtual environment:
+   ```bash
+   python -m venv env
+   ```
+3. Activate the virtual environment:
+   - Windows: `.\env\Scripts\activate`
+   - Linux/Mac: `source env/bin/activate`
+4. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-3. Launch the application:
-   ```bash
-   streamlit run app.py
+5. Create a `.env` file with your TMDB API key:
    ```
-4. Open your browser and navigate to `http://localhost:8501`.
+   API_KEY=your_tmdb_api_key_here
+   ```
+6. Run the development server:
+   ```bash
+   python manage.py runserver
+   ```
+
+### Frontend Setup
+
+1. Navigate to the React frontend directory:
+   ```bash
+   cd react_frontend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+## API Endpoints
+
+- `GET /api/health/`: Health check endpoint
+- `GET /api/movies/`: Get list of all available movies
+- `POST /api/recommend/`: Get movie recommendations
 
 ## Future Roadmap
 
@@ -70,17 +89,20 @@ model = pickle.load(open('model.pkl', 'rb'))
 - **Expanded Data Sources**: Integrate user reviews and ratings to refine suggestions.
 
 ## Contribution
+
 We welcome contributions! To get started:
+
 - Fork the repository.
 - Create a feature branch.
 - Submit a pull request with detailed documentation of changes.
 
 ## Contact
+
 For questions, feedback, or collaboration opportunities:
-- **Email**: GaurabPrasaigp@gmail.com
+
+- **Email**: Gaurabprasaigp@gmail.com
 - **GitHub**: github.com/gaurabprasai
 
 ---
 
-Recom demonstrates the potential of combining machine learning with web technologies to solve real-world problems. Explore the project, and feel free to contribute or adapt it to your needs!
-
+Fikson demonstrates the potential of combining machine learning with web technologies to solve real-world problems. Explore the project, and feel free to contribute or adapt it to your needs!
